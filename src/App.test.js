@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 test('renders without crashing', () => {
   const div = document.createElement('div');
@@ -36,6 +37,11 @@ describe('App component', () => {
     decrementBtn.simulate('click');
     const text = wrapper.find('h1').text();
     expect(text).toEqual('Count: -1');
+  });
+
+  it('matches the snapshot', () => {
+    const tree = renderer.create(<App />).toJSON();
+    expect(tree).toMatchSnapshot();
   })
 });
 
