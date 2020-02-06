@@ -1,24 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component matches the snapshot 1`] = `
-<div
-  className="App"
->
-  <h1>
-    Count: 
-    0
-  </h1>
-  <button
-    className="increment"
-    onClick={[Function]}
+Array [
+  <div
+    className="App"
   >
-    Increment
-  </button>
-  <button
-    className="decrement"
-    onClick={[Function]}
+    <h1>
+      Count: 
+      0
+    </h1>
+    <button
+      className="increment"
+      onClick={[Function]}
+    >
+      Increment
+    </button>
+    <button
+      className="decrement"
+      onClick={[Function]}
+    >
+      Decrement
+    </button>
+  </div>,
+  <div
+    className="App"
   >
-    Decrement
-  </button>
-</div>
+    <div
+      className="question"
+    >
+      <input
+        type="text"
+      />
+      <button
+        type="submit"
+      >
+        Ask
+      </button>
+    </div>
+  </div>,
+]
 `;
